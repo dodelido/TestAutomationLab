@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.14.1 on win32)" generated="2026-01-02T15:02:09.644208" rpa="false" schemaversion="5">
+<suite id="s1" name="Perthtestbot" source="C:\Users\User ACER\TestAutomationLab\perthtestbot.robot">
+<test id="s1-t1" name="Open Registration Page Success" line="10">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-01-02T15:02:10.365477" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x00000250A0AF16A0&gt;</msg>
+<var>${chrome_options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-01-02T15:02:10.364091" elapsed="0.001476"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-01-02T15:02:10.366805" level="INFO">${chrome_options.binary_location} = C:\Users\User ACER\TestAutomationLab\chrome-win64\chrome.exe</msg>
+<var>${chrome_options.binary_location}</var>
+<arg>${CHROME_BROWSER_PATH}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-01-02T15:02:10.366060" elapsed="0.000816"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-01-02T15:02:10.368544" level="INFO">${service} = &lt;selenium.webdriver.chrome.service.Service object at 0x00000250A0AF1010&gt;</msg>
+<var>${service}</var>
+<arg>sys.modules["selenium.webdriver.chrome.service"].Service(executable_path=r"${CHROME_DRIVER_PATH}")</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-01-02T15:02:10.367249" elapsed="0.001366"/>
+</kw>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2026-01-02T15:02:10.369553" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<arg>options=${chrome_options}</arg>
+<arg>service=${service}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2026-01-02T15:02:10.369059" elapsed="2.580114"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-01-02T15:02:12.952388" level="INFO">Opening url 'http://localhost:7272/Lab4/Registration.html'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-01-02T15:02:12.951890" elapsed="0.460394"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2026-01-02T15:02:13.459670" level="INFO">Element 'xpath=//h1' contains text 'Workshop Registration'.</msg>
+<arg>xpath=//h1</arg>
+<arg>Workshop Registration</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2026-01-02T15:02:13.412985" elapsed="0.046898"/>
+</kw>
+<status status="PASS" start="2026-01-02T15:02:10.362137" elapsed="3.098321"/>
+</test>
+<status status="PASS" start="2026-01-02T15:02:09.649966" elapsed="3.811885"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Perthtestbot" id="s1" pass="1" fail="0" skip="0">Perthtestbot</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
